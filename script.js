@@ -47,13 +47,13 @@ async function generateSingleCertificate(name, event, date, design) {
     case "2":
       certBg.src = "./assets/design2.png";
       certName.style = `
-        position: absolute;
-        top: 46%;
-        left: 52%;
+       position: absolute;
+        top: 44%;
+        left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 42px;
-        font-family: 'Dancing Script', cursive;
-        color: #222;
+        font-size: 70px;
+        font-family: "Tangerine", cursive;
+        color: #000;
         font-weight: bold;
       `;
       break;
@@ -61,13 +61,13 @@ async function generateSingleCertificate(name, event, date, design) {
     case "3":
       certBg.src = "./assets/design3.png";
       certName.style = `
-        position: absolute;
-        top: 50%;
-        left: 48%;
+       position: absolute;
+        top: 44%;
+        left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 50px;
-        font-family: 'Tangerine', cursive;
-        color: #333;
+        font-size: 70px;
+        font-family: "Tangerine", cursive;
+        color: #000;
         font-weight: bold;
       `;
       break;
@@ -76,11 +76,11 @@ async function generateSingleCertificate(name, event, date, design) {
       certBg.src = "./assets/design4.png";
       certName.style = `
         position: absolute;
-        top: 58%;
+        top: 44%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 46px;
-        font-family: 'Roboto', sans-serif;
+        font-size: 70px;
+        font-family: "Tangerine", cursive;
         color: #000;
         font-weight: bold;
       `;
