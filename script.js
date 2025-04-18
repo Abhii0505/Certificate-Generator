@@ -18,7 +18,7 @@ async function generateCertificates() {
     await generateSingleCertificate(name, event, date, design);
   }
 
-  alert("All certificates downloaded! ");
+  // alert("All certificates downloaded! ");
 }
 
 async function generateSingleCertificate(name, event, date, design) {
@@ -34,7 +34,7 @@ async function generateSingleCertificate(name, event, date, design) {
       certBg.src = "./assets/design1.png";
       certName.style = `
         position: absolute;
-        top: 48%;
+        top: 44%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 70px;
@@ -94,7 +94,7 @@ async function generateSingleCertificate(name, event, date, design) {
 
   certDiv.style.display = "block";
 
-  await new Promise((resolve) => setTimeout(resolve, 100));
+  await new Promise((resolve) => setTimeout(resolve, 1));
 
   const canvas = await html2canvas(certDiv);
   const { jsPDF } = window.jspdf;
