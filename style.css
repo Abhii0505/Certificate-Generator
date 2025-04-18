@@ -14,7 +14,7 @@ body {
   position: relative;
   width: 1086px;
   height: 768px;
-  display: none;
+  display: block;
   margin: 0 auto;
 }
 
@@ -28,11 +28,11 @@ body {
 
 .cert-name {
   position: absolute;
-  top: 45%; /* Adjust vertically */
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 200px;
-  /* font-weight: bold; */
+  font-weight: bold;
   color: #000;
   font-family: "Tangerine", cursive;
 }
