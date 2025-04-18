@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate Generator</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:wght@400;500;700&family=Tangerine:wght@400;700&family=Great+Vibes&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+    <h2 class="text-3xl font-bold text-blue-600 mb-6">
+      IEEE Certificate Generator
+    </h2>
+
+    <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-md space-y-4">
+      <textarea
+        id="nameListInput"
+        class="w-full border border-gray-300 rounded-md p-2"
+        required
+        placeholder="Enter names (one per line)"
+        rows="1"
+      ></textarea>
+
+      <input
+        type="text"
+        id="eventName"
+        class="w-full border border-gray-300 rounded-md p-2"
+        placeholder="Event Details"
+      />
+
+      <input
+        type="text"
+        id="eventDate"
+        class="w-full border border-gray-300 rounded-md p-2"
+        placeholder="Enter Date (e.g. April 18, 2025)"
+      />
+
+      <select
+        id="designSelector"
+        class="w-full border border-gray-300 rounded-md p-2"
+      >
+        <option value="1">WIE</option>
+        <option value="2">WIE + IEEE</option>
+        <option value="3">RAS</option>
+        <option value="4">SIGHT</option>
+      </select>
+
+      <button
+        onclick="generateCertificates()"
+        class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+      >
+        Generate Certificates
+      </button>
+    </div>
+
+    <!-- Certificate Preview (Hidden for rendering) -->
+    <div id="certificate" class="certificate relative mt-10 hidden">
+      <img
+        id="certBg"
+        src="./assets/design2.png"
+        class="cert-bg w-[1123px] h-[794px] absolute top-0 left-0"
+        alt="Certificate Background"
+      />
+      <div id="certName" class="cert-name absolute text-[48px] text-black">
+        Your Name
+      </div>
+      <div id="certEvent" class="cert-event absolute text-[22px] text-gray-800">
+        Event Name
+      </div>
+      <div
+        id="certDate"
+        class="cert-date absolute text-[20px] text-gray-600"
+        style="
+          top: 68%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: 'Poppins', sans-serif;
+        "
+      >
+        Date
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
