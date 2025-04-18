@@ -94,7 +94,7 @@ async function generateSingleCertificate(name, event, date, design) {
 
   certDiv.style.display = "block";
 
-  await new Promise((resolve) => setTimeout(resolve, 10000));
+  await new Promise((resolve) => setTimeout(resolve, 100));
 
   const canvas = await html2canvas(certDiv);
   const { jsPDF } = window.jspdf;
@@ -102,7 +102,7 @@ async function generateSingleCertificate(name, event, date, design) {
   const imgData = canvas.toDataURL("image/png");
 
   pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
-  // pdf.save(`${name}_Certificate.pdf`);
+  pdf.save(`${name}_Certificate.pdf`);
 
   certDiv.style.display = "none";
 }
