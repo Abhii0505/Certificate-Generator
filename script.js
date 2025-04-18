@@ -34,7 +34,7 @@ async function generateSingleCertificate(name, event, date, design) {
       certBg.src = "./assets/design1.png";
       certName.style = `
         position: absolute;
-        top: 52%;
+        top: 48%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 70px;
